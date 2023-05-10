@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+
+<meta http-equiv="subject" content="" />
+<meta http-equiv="title" content="" />
+<meta http-equiv="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+
+<link rel="stylesheet" type="text/css" href="./assets/css/plugin/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<script type="text/javascript" defer src="./assets/js/plugin/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" defer src="./assets/js/plugin/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" defer src="./assets/js/plugin/swiper.min.js"></script>
+<script type="text/javascript" defer src="./assets/js/common.js"></script>
+<title></title>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+<div class="header">
+    <div class="inner">
+        <div class="apply_wrap">
+            <div class="input_box">
+                <p>성함</p>
+                <input type="text" class="input_style_1 w120">
+            </div>
+            <div class="input_box">
+                <p>연락처</p>
+                <input type="text" class="input_style_1 w160">
+            </div>
+            <button type="button" class="submit_btn_1">상담 예약</button>
+        </div>
+        <!-- show class 추가시 display block -->
+        <p class="alert_msg">성함을 입력해 주세요.</p>
+    </div>
+</div>
+<!--// header -->
+
+<!-- popup -->
+<div class="popup close_pop" id="main_pop">
+    <div class="pop_inner">
+        <div class="contents">
+            <img src="./assets/img/popup_sample.jpg" alt="">
+        </div>
+        <div class="bottom_btn">
+            <div class="today_close">
+                <input type="checkbox" id="today_check">
+                <label for="today_check">오늘하루 보지않기</label>
+            </div>
+            <button type="button" class="close_btn" onclick="commonJs.popupCloseFn(this);">
+                <img src="./assets/img/icon/ico_close_w.png" alt="">
+            </button>
+        </div>
+    </div>
+</div>
+<!-- // popup -->
+
+        <!-- contents -->
+        <div class="contents">
+
+            <!-- main_slide -->
+            <section class="main-swiper main_sec">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video class="img_con" autoplay loop muted playsinline>
+                            <source src="./assets/img/main_visual.mp4" type="video/mp4">
+                        </video>
+                        <div class="inner">
+                            <div class="txt_con">
+                                <img src="./assets/img/main_slide_txt_01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <video class="img_con" autoplay loop muted playsinline>
+                            <source src="./assets/img/main_visual.mp4" type="video/mp4">
+                        </video>
+                        <div class="inner">
+                            <div class="txt_con">
+                                <img src="./assets/img/main_slide_txt_01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <video class="img_con" autoplay loop muted playsinline>
+                            <source src="./assets/img/main_visual.mp4" type="video/mp4">
+                        </video>
+                        <div class="inner">
+                            <div class="txt_con">
+                                <img src="./assets/img/main_slide_txt_01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar main-scrollbar"></div>
+            </section>
+            <!-- // main_slide -->
+
+            <!-- news -->
+            <section class="news_sec">
+                <div class="inner">
+                    <div class="tit_con">
+                        <h2 class="motion bottom">New News</h2>
+                        <p class="motion bottom">
+                            제주 신화빌라스의<br/>
+                            <span>새로운 소식</span>
+                        </p>
+                    </div>
+                    <div class="news_list motion bottom">
+                        <div class="news_card">
+                            <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                <h3>바라봄과 보여짐의 차이를 가진 제주 신화빌라스 바라봄과 보여짐의 차이를 가진 제주 신화빌라스</h3>
+                                <p class="desc">국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스 국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스</p>
+                                <p class="date">2023.05.02</p>
+                            </a>
+                        </div>
+                        <div class="news_card">
+                            <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                <h3>바라봄과 보여짐의 차이를 가진</h3>
+                                <p class="desc">국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스 국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스</p>
+                                <p class="date">2023.05.02</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // news -->
+
+            <!-- map -->
+            <section class="map_sec">
+                <div class="inner">
+                    <div class="tit_con">
+                        <h2 class="motion bottom">About jeju  SHIHWA VILLAS</h2>
+                        <p class="motion bottom">
+                            자연을 품은 라이프스타일<br/>
+                            <span>제주신화빌라스</span>
+                        </p>
+                    </div>
+
+                    <div class="map_con">
+                        <div class="img_con motion bottom">
+                            <img src="./assets/img/picture.jpg" alt="">
+                        </div>
+                        <ul class="list_con  motion bottom">
+                            <li>제주신화월드 랜딩 리조트관</li>
+                            <li>랜딩 컨벤션 센터</li>
+                            <li>제주신화월드 메리어트 리조트관</li>
+                            <li>제주신화월드 신화 리조트관 </li>
+                            <li>신화빌라스 (서머셋제주신화월드)</li>
+                            <li>신화 쇼핑 스트리트</li>
+                            <li>신화테마파크</li>
+                            <li>신화워터파크</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- // map -->
+
+            <!-- about -->
+            <section class="about_sec">
+                
+                <!-- service -->
+                <div class="service_sec">
+                    <div class="banner">
+                        <span>분양회원 제공서비스</span>
+                    </div>
+                    <div class="inner">
+                        <div class="service-swiper service_con">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>RESTAURANT</h3>
+                                        <p class="desc">
+                                            제주에서 만나는<br/>
+                                            새로운 미식의 세계
+                                        </p>
+                                        <div class="box">
+                                            직영 식음매장  
+                                            <span>25% 할인</span>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/service_img_01.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <p class="tag">분양회원 제공서비스</p>
+                                        <h3>POOL</h3>
+                                        <p class="desc">
+                                            사계절 아름다운 실내, 실외 수영장<br/>
+                                            그리고 인피니티 풀
+                                        </p>
+                                        <div class="box">
+                                            모실, 스카이 풀 무료 이용
+                                            <span>바우처매년 각 12매 5년간 제공 </span>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/service_img_02.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <p class="tag">분양회원 제공서비스</p>
+                                        <h3>HOTEL</h3>
+                                        <p class="desc">
+                                            편안함으로 가득한 모던 스타일 스탠다드,<br/>
+                                            슈페리어  킹 객실
+                                        </p>
+                                        <div class="box sm">
+                                            <span>랜딩관 슈페리어객실 매년12박, 5년간  무료 이용</span>
+                                            (숙박 추가 차감 시 신화, 메리어트, 서머셋 객실 이용가능)
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/service_img_03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <p class="tag">분양회원 제공서비스</p>
+                                        <h3>CLUB HOUSE</h3>
+                                        <p class="desc">
+                                            수영장, 찜질방, 피트니스, 스파를 갖춘<br/>
+                                            웰빙존 ‘탐모라’
+                                        </p>
+                                        <div class="box">
+                                            <span>탐모라 무료 이용</span>
+                                            (시설 유지 시까지)
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/service_img_04.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <p class="tag">분양회원 제공서비스</p>
+                                        <h3>ATTRACTION</h3>
+                                        <p class="desc">
+                                            세계적인 수준의 테마파크와 워터파크에서 누리는<br/>
+                                            상상 이상의 재미와 모험
+                                        </p>
+                                        <div class="box">
+                                            신화테마파크, 신화워터파크
+                                            <span>7년간 무료이용</span>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/service_img_05.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination service-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // service -->
+
+                <!-- resort -->
+                <div class="resort_sec">
+                    <div class="banner">
+                        <span>About 신화월드 리조트</span>
+                    </div>
+                    <div class="inner">
+                        <div class="resort-swiper resort_con">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>LANDING</h3>
+                                        <p class="tit">
+                                            합리적인 가격으로 누리는 5성급 서비스<br/>
+                                            스마트 비즈니스 리조트
+                                        </p>
+                                        <p class="desc">
+                                            레저 여행자, 비즈니스와 휴식을 한꺼번에 추구하는 MICE 고객에게 최적화된 제주 호텔.
+                                        </p>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/resort_img_01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>SHINHWA</h3>
+                                        <p class="tit">
+                                            새로운 경험을 선사하는<br/>
+                                            럭셔리 라이프스타일 리조트
+                                        </p>
+                                        <p class="desc">
+                                            신화테마파크, 워터파크를 이용하는 가족 여행객에게 최적화된 프리미엄 리조트<br/>
+                                            신화관 투숙객은 특별 혜택으로 신화워터파크를 스카이풀을 통해 무료로 입장 가능합니다.
+                                        </p>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/resort_img_02.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>SUMMERSET</h3>
+                                        <p class="tit">
+                                            곶자왈 숲에 둘러샤여 3대가 함께하는<br/>
+                                            럭셔리 패밀리 베케이션
+                                        </p>
+                                        <p class="desc">
+                                            3개의 침실, 2개의 욕실, 풀옵션 주방을 갖춘 이상적인 가족여행 숙소! <br/>
+                                            주방에는 와인셀러, 식기세척기, 오븐, 대형 냉장고, 세탁기, 건조기 등<br/>
+                                            프리미엄 스마트 가전이 풀옵션입니다.
+                                        </p>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/resort_img_03.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>MARRIOTT</h3>
+                                        <p class="tit">
+                                            메리어트관에서 차별화된 혜택을 누려보세요.
+                                        </p>
+                                        <p class="desc">
+                                            성산일출봉을 형상화한 럭셔리 클럽하우스 ‘모실’은 <br/>
+                                            수영장과 프리미엄 에스테틱을 품고 재충전의 시간을 선사합니다. <br/>
+                                            또한 쇼핑과 외식을 논스톱으로 해결할 수 있습니다.
+                                        </p>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/resort_img_04.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination resort-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // resort -->
+
+                <!-- premium -->
+                <div class="premium_sec">
+                    <div class="banner">
+                        <span>신화빌라스만의 프리미엄 라이프</span>
+                    </div>
+                    <div class="inner">
+                        <div class="premium-swiper premium_con">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>KIDS</h3>
+                                        <p class="desc">
+                                            플레이타임은 단순한 놀이 공간이 아닌 다양한 체험 위주의 컨텐츠로 구성되어<br/>
+                                            아이들의 신체 및 감성 발달을 도와줍니다.<br/><br/>
+                                            로봇플레닛은 로봇을직접 만지고 놀며 배우는 제주 유일의 로봇과학관입니다. 
+                                        </p>
+                                        <div class="thumb_con">
+                                           <dl>
+                                               <dt>플레이 타임</dt>
+                                               <dd>
+                                                   <img src="./assets/img/premium_thumb_01_01.png" alt="">
+                                               </dd>
+                                           </dl>
+                                            <dl>
+                                                <dt>로봇 플레닛</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_01_02.png" alt="">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/premium_img_01.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>ENTERTAINMENT</h3>
+                                        <p class="desc">
+                                            가족, 친구들과 여럿이 즐길 수 있는 볼링장, 게임장, 노래방까지<br/>
+                                            모든 세대를 아우르는 엔터테인먼트가<br/>
+                                            여행에 즐거움을 더합니다.
+                                        </p>
+                                        <div class="thumb_con">
+                                            <dl>
+                                                <dt>아이존 액트</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_02_01.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>코인노래방</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_02_02.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>끌로드 아트홀</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_02_03.png" alt="">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/premium_img_02.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>BEAUTY & WELLNESS</h3>
+                                        <p class="desc">
+                                            피부와 근육에 쌓인 스트레스를 풀어주는 스파와 마사지,<br/>
+                                            아름다움을 완성해 주는 헤어와 뷰티 케어 서비스를 받으며<br/>
+                                            제주자연과 맑은 공기 속에서 몸과 마음을 재충전하세요. 
+                                        </p>
+                                        <div class="thumb_con type2">
+                                            <dl>
+                                                <dt>탐모라 수영장</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_03_01.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>비포앤애프터 클리닉</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_03_02.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>나다예 골프 <br/> 아카데미</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_03_03.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>휘트니스</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_03_04.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>피히츠 스파</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_03_05.png" alt="">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/premium_img_03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="txt_con motion">
+                                        <h3>SHOPPING</h3>
+                                        <p class="desc">
+                                            다양한 글로벌 브랜드와 제주색이 담긴 기념품 매장이 즐비한<br/>
+                                            쇼핑 스트리트에서 여행에서 빠질 수 없는<br/>
+                                            쇼핑의 즐거움을 누려보세요.
+                                        </p>
+                                        <div class="thumb_con type3">
+                                            <dl>
+                                                <dt>베레종</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_04_01.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>조안 테디베어</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_04_02.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>제주애퐁당</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_04_03.png" alt="">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>신세계사이먼 <br/> 제주 프리미엄전문점</dt>
+                                                <dd>
+                                                    <img src="./assets/img/premium_thumb_04_04.png" alt="">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="img_con motion">
+                                        <img src="./assets/img/premium_img_04.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination premium-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // premium -->
+                
+            </section>
+            <!-- // about -->
+
+            <!-- type -->
+            <section class="type_sec">
+                <div class="inner">
+                    <div class="tit_con">
+                        <h2 class="motion bottom">Primium Life</h2>
+                        <p class="motion bottom">
+                            <span>분양 타입구성</span>
+                            <span class="sm">신화빌라스의 삶은 놀라움으로  가득 찹니다.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="type-swiper type_list motion bottom">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-type="ca">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_ca.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>CA 타입 (46.5평-154m2)</p>
+                                </div>
+                        </div>
+                        <div class="swiper-slide" data-type="cb">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_cb.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>CB 타입 (46.2평-153m2)</p>
+                                </div>
+                        </div>
+                        <div class="swiper-slide" data-type="cc">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_cc.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>CC 타입 (47.4평-157m2)</p>
+                                </div>
+                        </div>
+                        <div class="swiper-slide" data-type="va">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_va.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>VA 타입 (68.9평-228m2)</p>
+                                </div>
+                        </div>
+                        <div class="swiper-slide" data-type="vb">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_vb.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>VB 타입 (78.65평-260m2)</p>
+                                </div>
+                        </div>
+                        <div class="swiper-slide" data-type="vd">
+                                <div class="img_con">
+                                    <img src="./assets/img/type_vd.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p>VD 타입 (126.14평-417m2)</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="type-button">
+                        <div class="swiper-button-prev type-button-prev"></div>
+                        <div class="swiper-button-next type-button-next"></div>
+                    </div>
+                </div>
+                <div class="type_view">
+                    <div class="inner">
+                        <h3 class="motion bottom">Interior 3D VR</h3>
+                        <div class="vr_con motion bottom">
+                            <a href="#">상담 문의</a>
+                            <iframe src='https://my.matterport.com/show/?m=wR2UNzgbsyo' id="vr" frameborder='0' allowfullscreen allow='xr-spatial-tracking'></iframe>
+                        </div>
+                        <dl class="txt_con motion bottom">
+                            <dt id="vr_tit">CA 타입 (46.5평-154m2)</dt>
+                            <dd id="vt_desc">
+                                천정고를 높게 설계 / 3-BAY 구조를 가지고있어 좋은 채광과 풍광 / 거실-주방까지 한 방향으로 되어 환기/통풍 용이 / 전침실에 붙박이장을 포함한 넉넉한수납<br/> 풀옵션  주방, 프리미엄 가구, 침구류까지 풀옵션 / 홈 네트워크 시스템
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <!-- // type -->
+
+            <!-- jeju -->
+            <section class="jeju_sec">
+                <div class="inner">
+                    <div class="tit_con">
+                        <h2 class="motion bottom">Primium Education</h2>
+                        <p class="motion bottom">
+                            <span>프리미엄 교육</span>을 위한 최적의 장소<br/>
+                            <span>제주영어교육도시 </span>
+                        </p>
+                        <p class="sub_tit motion bottom">
+                            최고급 교육도시 제주국제학교<br/>
+                            당신의 아이를 위해 프리미엄을 즐기세요.<br/>
+                            셔틀버스를 운행하여 안전한 통학을 책임지고 있습니다.
+                        </p>
+                    </div>
+                    <div class="jeju_map">
+                        <div class="outline motion bottom">
+                            <img src="./assets/img/contact_img_map.png" alt="">
+                        </div>
+                        <div class="picture motion bottom">
+                            <img src="./assets/img/contact_img_01.png" alt="">
+                            <ul>
+                                <li>
+                                    <img src="./assets/img/contact_img_02.png" alt="">
+                                    <p>동북아시아 교육허브<span>제주영어교육도시</span></p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/contact_img_03.png" alt="">
+                                    <p>글로벌인재가 자라는 <span>글로벌 교육환경</span></p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/contact_img_04.png" alt="">
+                                    <p>제주영어교육도시 최적의 인프라 <span>입지조건</span> </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // jeju -->
+
+            <!-- contact -->
+            <section class="contact_sec">
+                <div class="inner">
+                    <h2 class="motion bottom">CONTACT US</h2>
+                    <div class="contact_form motion bottom">
+                        <div class="input_con">
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>
+                                    <input type="text" class="input_style_2" placeholder="이름을 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>
+                                    <input type="text" class="input_style_2" placeholder="연락처를 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>거주지역</dt>
+                                <dd>
+                                    <input type="text" class="input_style_2" placeholder="거주지역을 입력해주세요 (ex.서울)">
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="select_con">
+                            <dl>
+                                <dt>문의타입</dt>
+                                <dd>
+                                    <select class="select_style">
+                                        <option value="" selected disabled>문의타입 CA / CB / CC / VA / VB / VD</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CB">CB</option>
+                                        <option value="CC">CC</option>
+                                        <option value="VA">VA</option>
+                                        <option value="VB">VB</option>
+                                        <option value="VD">VD</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>분양이유</dt>
+                                <dd>
+                                    <select class="select_style">
+                                        <option value="" selected disabled>분양이유</option>
+                                        <option value="아이교육">아이교육</option>
+                                        <option value="투자">투자</option>
+                                        <option value="임대">임대</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="submit_con">
+                            <ul class="check_list">
+                                <li>
+                                    <input type="checkbox" id="check_01">
+                                    <label for="check_01"><span class="box"></span><a href="#">개인정보 수집 및 이용</a>에 동의합니다.(필수)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check_02">
+                                    <label for="check_02"><span class="box"></span><a href="#">제 3자 제공 및 활용</a>에 동의합니다.(필수)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check_03">
+                                    <label for="check_03"><span class="box"></span><a href="#">광고성정보 및 수신</a>에 동의합니다.(선택)</label>
+                                </li>
+                            </ul>
+                            <button type="button" class="submit_btn">등록하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // contact -->
+
+        </div>
+        <!-- // contents -->
+
+        <!-- notice -->
+        <div class="notice_wrap" id="notice_wrap">
+            <div class="notice_frame">
+                <div class="notice_inner">
+                    <!-- notice_list -->
+                    <div class="notice_list">
+                        <div class="tit_con">
+                            <h4>제주 신화빌라스의 <span>새로운 소식</span></h4>
+                            <button type="button" class="close_btn" onclick="commonJs.noticeCloseFn();">
+                                <img src="./assets/img/icon/ico_close_b.png" alt="">
+                            </button>
+                        </div>
+                        <div class="list_con">
+                            <ul class="lists">
+                                <li>
+                                    <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                        <dl>
+                                            <dt>
+                                                <strong>바라봄과 보여짐의 차이 제주 신화빌라스</strong>
+                                                <span>국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다. 제주 신화빌라스는 국제학교로서 글로벌 인</span>
+                                            </dt>
+                                            <dd>2023.05.02</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                        <dl>
+                                            <dt>
+                                                <strong>바라봄과 보여짐의 차이 제주 신화빌라스</strong>
+                                                <span>국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다. 제주 신화빌라스는 국제학교로서 글로벌 인</span>
+                                            </dt>
+                                            <dd>2023.05.02</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                        <dl>
+                                            <dt>
+                                                <strong>바라봄과 보여짐의 차이 제주 신화빌라스</strong>
+                                                <span>국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다. 제주 신화빌라스는 국제학교로서 글로벌 인</span>
+                                            </dt>
+                                            <dd>2023.05.02</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                        <dl>
+                                            <dt>
+                                                <strong>바라봄과 보여짐의 차이 제주 신화빌라스</strong>
+                                                <span>국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다. 제주 신화빌라스는 국제학교로서 글로벌 인</span>
+                                            </dt>
+                                            <dd>2023.05.02</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:commonJs.noticeOpenDetailFn();">
+                                        <dl>
+                                            <dt>
+                                                <strong>바라봄과 보여짐의 차이 제주 신화빌라스</strong>
+                                                <span>국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다. 제주 신화빌라스는 국제학교로서 글로벌 인</span>
+                                            </dt>
+                                            <dd>2023.05.02</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="paging">
+                                <li class="active">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#">6</a>
+                                </li>
+                                <li>
+                                    <a href="#">7</a>
+                                </li>
+                                <li>
+                                    <a href="#">8</a>
+                                </li>
+                                <li>
+                                    <a href="#">9</a>
+                                </li>
+                                <li>
+                                    <a href="#">10</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // notice_list -->
+    
+                    <!-- detail -->
+                    <div class="detail">
+                        <div class="tit_con">
+                            <h4>바라봄과 보여짐의 차이 제주 신화빌라스 바라봄과 보여짐의 차이 제주 신화빌라스 바라봄과 보여짐의 차이 제주 신화빌라스</h4>
+                            <button type="button" class="close_btn" onclick="commonJs.noticeCloseFn();">
+                                <img src="./assets/img/icon/ico_close_b.png" alt="">
+                            </button>
+                        </div>
+                        <div class="detail_con">
+                            <div class="desc">
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.<br/>
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.
+
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.<br/>
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.<br/>
+                                제주 신화빌라스는 국제학교를 품은 글로벌 학군입니다.<br/>
+                                국제학교를 품은 글로벌 No.1 학군에 제주 신화빌라스가 있습니다.<br/><br/>
+    
+                                자연을 품은 라이프스타일을 가진 제주신화빌라스입니다.
+                            </div>
+                            <a href="javascript:commonJs.noticeOpenListFn();" class="list_btn">목록으로</a>
+                        </div>
+                    </div>
+                    <!-- // detail -->
+                </div>
+            </div>
+        </div>
+        <!-- // notice -->
+
+        <div class="float_btn">
+    <a href="#"><img src="./assets/img/icon/ico_call.png" alt=""></a>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="inner">
+        <p class="logo"><img src="./assets/img/logo.png" alt=""></p>
+        <address>
+            <p>람정제주개발 주식회사</p>
+            <p>제주특별자치도 서귀포시 안덕면 녹차분재로 217</p>
+            <p>사업자등록번호 : 616-86-09829 <a href="#">사업자정보 확인</a></p>
+        </address>
+        <address>
+            <p>통신판매업 신고번호 : 2017-안덕면-0024</p>
+            <p>전화번호 : 064-908-3000</p>
+            <p><a href="#">개인정보 처리방침</a></p>
+        </address>
+        <ul class="link_list">
+            <li>
+                <a href="#"><img src="./assets/img/icon/ico_blog.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/img/icon/ico_twitch.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/img/icon/ico_kakao.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/img/icon/ico_insta.png" alt=""></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--// footer -->
+
+    </div>
+
+</body>
+</html>
