@@ -299,6 +299,11 @@
 	width: 100%;
 }
 
+.popup .contents{
+	overflow-y: scroll;
+	max-height: 750px;
+}
+
 .popup .pop_inner {
 	overflow: hidden;
 	border-radius: 10px;
@@ -2290,7 +2295,7 @@
 
 	.popup .contents{
 		overflow-y: scroll; 
-		max-height: 750px;
+		max-height: 104.17vw;
 	}
 
 	.popup .pop_inner {
