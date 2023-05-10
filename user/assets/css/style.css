@@ -1618,6 +1618,7 @@
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
+		right: 0;
 	}
 }
 @media all and (max-width: 1000px) {
@@ -2169,6 +2170,10 @@
 	.footer address p::after {
 		width: 0.14vw;
 		height: 2.08vw;
+	}
+
+	.footer .link_list {
+		margin: 20.83vw auto 0;
 	}
 
 	.footer .link_list li {
