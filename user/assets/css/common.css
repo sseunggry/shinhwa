@@ -1297,24 +1297,30 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(10%);
 	    -ms-transform: translateY(10%);
 	        transform: translateY(10%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .motion.left {
 	-webkit-transform: translateX(-10%);
 	    -ms-transform: translateX(-10%);
 	        transform: translateX(-10%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .motion.right {
 	-webkit-transform: translateX(10%);
 	    -ms-transform: translateX(10%);
 	        transform: translateX(10%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .motion.onTrans {
@@ -1344,16 +1350,20 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .service_con .swiper-slide .txt_con.motion h3 {
 	opacity: 0;
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.1s;
 	        transition-delay: 0.1s;
 }
@@ -1362,8 +1372,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.2s;
 	        transition-delay: 0.2s;
 }
@@ -1372,8 +1384,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.3s;
 	        transition-delay: 0.3s;
 }
@@ -1382,8 +1396,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(2%);
 	    -ms-transform: translateY(2%);
 	        transform: translateY(2%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .service_con .swiper-slide.swiper-slide-active .txt_con.motion.onTrans .tag {
 	opacity: 1;
@@ -1421,16 +1437,20 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .resort_con .swiper-slide .txt_con.motion .tit {
 	opacity: 0;
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.1s;
 	        transition-delay: 0.1s;
 }
@@ -1439,8 +1459,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.2s;
 	        transition-delay: 0.2s;
 }
@@ -1449,8 +1471,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(2%);
 	    -ms-transform: translateY(2%);
 	        transform: translateY(2%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .resort_con .swiper-slide.swiper-slide-active .txt_con.motion.onTrans h3 {
 	opacity: 1;
@@ -1482,16 +1506,20 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .premium_con .swiper-slide .txt_con.motion .desc {
 	opacity: 0;
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.1s;
 	        transition-delay: 0.1s;
 }
@@ -1500,8 +1528,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(15%);
 	    -ms-transform: translateY(15%);
 	        transform: translateY(15%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 	-webkit-transition-delay: 0.2s;
 	        transition-delay: 0.2s;
 }
@@ -1510,8 +1540,10 @@ input::placeholder, textarea::placeholder {
 	-webkit-transform: translateY(2%);
 	    -ms-transform: translateY(2%);
 	        transform: translateY(2%);
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 .premium_con .swiper-slide.swiper-slide-active .txt_con.motion.onTrans h3 {
 	opacity: 1;
