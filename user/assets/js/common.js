@@ -114,18 +114,33 @@ var commonJs = {
 	// 서비스 슬라이드
 	serviceSlideFn: function(){
 		serviceSwiper = new Swiper(".service-swiper", {
+			loop: true,
+			speed: 1000,
+			autoplay: {
+				delay: 3000,
+			},
 			pagination: {
 				el: ".service-pagination"
 			},
 		});
 
 		resortSwiper = new Swiper(".resort-swiper", {
+			loop: true,
+			speed: 1000,
+			autoplay: {
+				delay: 3000,
+			},
 			pagination: {
 				el: ".resort-pagination"
 			},
 		});
 
 		premiumSwiper = new Swiper(".premium-swiper", {
+			loop: true,
+			speed: 1000,
+			autoplay: {
+				delay: 3000,
+			},
 			pagination: {
 				el: ".premium-pagination"
 			},
@@ -136,7 +151,11 @@ var commonJs = {
 			centeredSlides: true,
 			spaceBetween: 30,
 			loop: true,
-			// slideToClickedSlide: true,
+			// speed: 600,
+			// autoplay: {
+			// 	delay: 3000,
+			// },
+			slideToClickedSlide: true,
 			navigation: {
 				nextEl: ".type-button-next",
 				prevEl: ".type-button-prev",
